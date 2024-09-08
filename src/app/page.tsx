@@ -26,6 +26,7 @@ import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuSep
 import { Avatar, AvatarImage, AvatarFallback } from "@/app/components/ui/avatar"
 
 
+
 const images = [
   'https://i.ibb.co/gMjYVhp/bgg.webp',
   'https://i.ibb.co/xKZmdxG/bg.webp',
@@ -40,21 +41,21 @@ const courses = [
 ]
 
 const faqs = [
-  { 
-    question: "¿Cómo puedo inscribirme en un curso?", 
-    answer: "Para inscribirte en un curso, simplemente navega a la página del curso que te interesa y haz clic en el botón 'Inscribirse'. Si aún no tienes una cuenta, se te pedirá que crees una antes de completar la inscripción." 
+  {
+    question: "¿Cómo puedo inscribirme en un curso?",
+    answer: "Para inscribirte en un curso, simplemente navega a la página del curso que te interesa y haz clic en el botón 'Inscribirse'. Si aún no tienes una cuenta, se te pedirá que crees una antes de completar la inscripción."
   },
-  { 
-    question: "¿Los cursos tienen una fecha de inicio específica?", 
-    answer: "La mayoría de nuestros cursos son de ritmo libre, lo que significa que puedes comenzar en cualquier momento. Sin embargo, algunos cursos en vivo pueden tener fechas de inicio específicas. Siempre verifica los detalles del curso para obtener información precisa." 
+  {
+    question: "¿Los cursos tienen una fecha de inicio específica?",
+    answer: "La mayoría de nuestros cursos son de ritmo libre, lo que significa que puedes comenzar en cualquier momento. Sin embargo, algunos cursos en vivo pueden tener fechas de inicio específicas. Siempre verifica los detalles del curso para obtener información precisa."
   },
-  { 
-    question: "¿Cuánto tiempo tengo para completar un curso?", 
-    answer: "Una vez que te inscribes en un curso, tienes acceso ilimitado a su contenido. Puedes avanzar a tu propio ritmo y revisar el material tantas veces como desees." 
+  {
+    question: "¿Cuánto tiempo tengo para completar un curso?",
+    answer: "Una vez que te inscribes en un curso, tienes acceso ilimitado a su contenido. Puedes avanzar a tu propio ritmo y revisar el material tantas veces como desees."
   },
-  { 
-    question: "¿Ofrecen certificados al completar un curso?", 
-    answer: "Sí, ofrecemos certificados de finalización para todos nuestros cursos. Una vez que hayas completado todos los módulos y tareas requeridas, podrás descargar tu certificado directamente desde tu panel de estudiante." 
+  {
+    question: "¿Ofrecen certificados al completar un curso?",
+    answer: "Sí, ofrecemos certificados de finalización para todos nuestros cursos. Una vez que hayas completado todos los módulos y tareas requeridas, podrás descargar tu certificado directamente desde tu panel de estudiante."
   },
 ]
 
@@ -202,21 +203,21 @@ export default function CoursesPage() {
 </header>
       <main className="flex-1">
         <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
-          {images.map((src, index) => (
-            <div
-              key={src}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentImage ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
+        {images.map((src, index) => (
+          <div
+            key={src}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentImage ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
               <img src={src} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
-            </div>
-          ))}
-          <div className="absolute inset-0 bg-black/50" />
-          <h1 className="relative z-10 text-4xl md:text-6xl font-bold text-white text-center">
-           CARAMEL PREVIEW
-          </h1>
-        </section>
+          </div>
+        ))}
+        <div className="absolute inset-0 bg-black/50" />
+        <h1 className="relative z-10 text-4xl md:text-6xl font-bold text-white text-center">
+          CARAMEL PREVIEW
+        </h1>
+      </section>
         <section className="py-16 bg-muted">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-6 text-center">Más Información</h2>

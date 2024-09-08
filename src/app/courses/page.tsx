@@ -8,6 +8,7 @@ import { Label } from "@/app/components/ui/label"
 import { Checkbox } from "@/app/components/ui/checkbox"
 import { Input } from "@/app/components/ui/input"
 import { Badge } from "@/app/components/ui/badge"
+import Image from "next/image"
 
 export default function Courses() {
   return (
@@ -194,7 +195,7 @@ export default function Courses() {
                 <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
                   <span className="sr-only">View course</span>
                 </Link>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Course image"
                   width={400}
@@ -213,7 +214,7 @@ export default function Courses() {
                 <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
                   <span className="sr-only">View course</span>
                 </Link>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Course image"
                   width={400}
@@ -232,7 +233,7 @@ export default function Courses() {
                 <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
                   <span className="sr-only">View course</span>
                 </Link>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Course image"
                   width={400}
@@ -251,7 +252,7 @@ export default function Courses() {
                 <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
                   <span className="sr-only">View course</span>
                 </Link>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Course image"
                   width={400}
@@ -270,7 +271,7 @@ export default function Courses() {
                 <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
                   <span className="sr-only">View course</span>
                 </Link>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Course image"
                   width={400}
@@ -289,7 +290,7 @@ export default function Courses() {
                 <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
                   <span className="sr-only">View course</span>
                 </Link>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Course image"
                   width={400}

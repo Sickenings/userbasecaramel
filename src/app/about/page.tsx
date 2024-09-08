@@ -3,7 +3,7 @@ import { Button } from "@/app/components/ui/button"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuSeparator, DropdownMenuItem } from "@/app/components/ui/dropdown-menu"
 import { Avatar, AvatarImage, AvatarFallback } from "@/app/components/ui/avatar"
 import { Sheet, SheetTrigger, SheetContent } from "@/app/components/ui/sheet"
-
+import Image from "next/image"
 
 export default function About() {
   return (
@@ -157,7 +157,7 @@ export default function About() {
                 },
               ].map((member, index) => (
                 <div key={index} className="bg-background rounded-lg overflow-hidden shadow-sm">
-                  <img
+                  <Image
                     src={member.image}
                     width={400}
                     height={300}
