@@ -21,7 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/app/components/ui/select"
-import { ChevronLeft, ChevronRight, Menu } from 'lucide-react'
+import { ChevronLeft, ChevronRight} from 'lucide-react'
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuSeparator, DropdownMenuItem } from "@/app/components/ui/dropdown-menu"
 import { Avatar, AvatarImage, AvatarFallback } from "@/app/components/ui/avatar"
 
@@ -333,22 +333,6 @@ export default function CoursesPage() {
           </div>
         </div>
       </footer>
-    </div>
-  )
-}
-
-function MobileNav() {
-  return (
-    <div className="flex flex-col space-y-3">
-      <Link href="/" className="font-bold">
-        Repostery
-      </Link>
-      <nav className="flex flex-col space-y-3">
-        <Link href="/courses">Cursos</Link>
-        <Link href="/about">Acerca de</Link>
-        <Link href="/login">Iniciar sesión</Link>
-        <Link href="/register">Registrarse</Link>
-      </nav>
     </div>
   )
 }
