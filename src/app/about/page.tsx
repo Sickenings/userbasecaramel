@@ -3,13 +3,6 @@ import { Button } from "@/app/components/ui/button"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuSeparator, DropdownMenuItem } from "@/app/components/ui/dropdown-menu"
 import { Avatar, AvatarImage, AvatarFallback } from "@/app/components/ui/avatar"
 import { Sheet, SheetTrigger, SheetContent } from "@/app/components/ui/sheet"
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/app/components/ui/accordion"
-import { Label } from "@/app/components/ui/label"
-import { Checkbox } from "@/app/components/ui/checkbox"
-import { Input } from "@/app/components/ui/input"
-import { Badge } from "@/app/components/ui/badge"
-
-
 
 
 export default function About() {
