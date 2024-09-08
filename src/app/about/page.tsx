@@ -8,7 +8,7 @@ export function About() {
       <header className="fixed top-0 left-0 z-10 w-full bg-transparent text-primary-foreground py-4 px-6 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold" prefetch={false}>
           <Button variant="ghost" className="mr-4">
-            <HomeIcon className="w-5 h-5 text-black" />
+            
           </Button>
         </Link>
         <div className="flex gap-4">
@@ -138,24 +138,5 @@ export function About() {
   );
 }
 
-function HomeIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-      <polyline points="9 22 9 12 15 12 15 22" />
-    </svg>
-  );
-}
 
 export default About;
