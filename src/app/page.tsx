@@ -2,7 +2,6 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { Button } from "@/app/components/ui/button"
-import { Input } from "@/app/components/ui/input"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/app/components/ui/card"
 import {
   Accordion,
@@ -25,10 +24,6 @@ import {
 import { ChevronLeft, ChevronRight, Menu } from 'lucide-react'
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuSeparator, DropdownMenuItem } from "@/app/components/ui/dropdown-menu"
 import { Avatar, AvatarImage, AvatarFallback } from "@/app/components/ui/avatar"
-import { Label } from "@/app/components/ui/label"
-import { Checkbox } from "@/app/components/ui/checkbox"
-import { Badge } from "@/app/components/ui/badge"
-
 
 
 const images = [
