@@ -24,15 +24,15 @@ To read more about using these font, please visit the Next.js documentation:
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
 import Link from "next/link"
-import { Button } from "@/app/ui/button"
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuSeparator, DropdownMenuItem } from "@/app/ui/dropdown-menu"
-import { Avatar, AvatarImage, AvatarFallback } from "@/app/ui/avatar"
-import { Sheet, SheetTrigger, SheetContent } from "@/app/ui/sheet"
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/app/ui/accordion"
-import { Label } from "@/app/ui/label"
-import { Checkbox } from "@/app/ui/checkbox"
-import { Input } from "@/app/ui/input"
-import { Badge } from "@/app/ui/badge"
+import { Button } from "@/app/components/ui/button"
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuSeparator, DropdownMenuItem } from "@/app/components/ui/dropdown-menu"
+import { Avatar, AvatarImage, AvatarFallback } from "@/app/components/ui/avatar"
+import { Sheet, SheetTrigger, SheetContent } from "@/app/components/ui/sheet"
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/app/components/ui/accordion"
+import { Label } from "@/app/components/ui/label"
+import { Checkbox } from "@/app/components/ui/checkbox"
+import { Input } from "@/app/components/ui/input"
+import { Badge } from "@/app/components/ui/badge"
 import Login from "../login/page"
 
 export function Courses() {

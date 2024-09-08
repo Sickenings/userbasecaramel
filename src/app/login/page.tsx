@@ -17,11 +17,11 @@ To read more about using these font, please visit the Next.js documentation:
 - App Directory: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
-import { Carousel, CarouselContent, CarouselItem } from "@/app/ui/carousel"
-import { Label } from "@/app/ui/label"
-import { Input } from "@/app/ui/input"
+import { Carousel, CarouselContent, CarouselItem } from "@/app/components/ui/carousel"
+import { Label } from "@/app/components/ui/label"
+import { Input } from "@/app/components/ui/input"
 import Link from "next/link"
-import { Button } from "@/app/ui/button"
+import { Button } from "@/app/components/ui/button"
 
 // Asegúrate de que el componente Login esté exportado correctamente
 const Login = () => {

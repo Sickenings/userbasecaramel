@@ -3,8 +3,8 @@
 * @see https://v0.dev/t/6xCVqcV1TZG
 * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
 */
-import { Input } from "@/app/ui/input"
-import { Button } from "@/app/ui/button"
+import { Input } from "@/app/components/ui/input"
+import { Button } from "@/app/components/ui/button"
 import Link from "next/link"
 
 

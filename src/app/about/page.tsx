@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "@/app/ui/button";
-import { Avatar, AvatarImage, AvatarFallback } from "@/app/ui/avatar";
+import { Button } from "@/app/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/app/components/ui/avatar";
 
 export function About() {
   return (

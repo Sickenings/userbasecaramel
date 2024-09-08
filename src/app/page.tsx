@@ -1,27 +1,27 @@
 "use client"
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { Button } from "@/app/ui/button"
-import { Input } from "@/app/ui/input"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/app/ui/card"
+import { Button } from "@/app/components/ui/button"
+import { Input } from "@/app/components/ui/input"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/app/components/ui/card"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/app/ui/accordion"
+} from "@/app/components/ui/accordion"
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
-} from "@/app/ui/sheet"
+} from "@/app/components/ui/sheet"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/app/ui/select"
+} from "@/app/components/ui/select"
 import { ChevronLeft, ChevronRight, Menu } from 'lucide-react'
 
 const images = [
