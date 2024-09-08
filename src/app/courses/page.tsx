@@ -9,7 +9,7 @@ import { Checkbox } from "@/app/components/ui/checkbox"
 import { Input } from "@/app/components/ui/input"
 import { Badge } from "@/app/components/ui/badge"
 
-export function Courses() {
+export default function Courses() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-primary text-primary-foreground py-4 px-6">
@@ -333,8 +333,3 @@ export function Courses() {
     </div>
   )
 }
-
-
-
-
-export default Courses

@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Button } from "@/app/components/ui/button"
 
 // Asegúrate de que el componente Login esté exportado correctamente
-const Login = () => {
+export default function Login() {
   return (
     <div className="flex min-h-screen w-full items-center justify-center bg-gradient-to-r from-[#FFF5EE] to-[#FFEFD5]">
       <div className="relative w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-xl">
@@ -90,4 +90,3 @@ const Login = () => {
 }
 
 // Exporta el componente como exportación por defecto
-export default Login;
