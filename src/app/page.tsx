@@ -23,6 +23,13 @@ import {
   SelectValue,
 } from "@/app/components/ui/select"
 import { ChevronLeft, ChevronRight, Menu } from 'lucide-react'
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuSeparator, DropdownMenuItem } from "@/app/components/ui/dropdown-menu"
+import { Avatar, AvatarImage, AvatarFallback } from "@/app/components/ui/avatar"
+import { Label } from "@/app/components/ui/label"
+import { Checkbox } from "@/app/components/ui/checkbox"
+import { Badge } from "@/app/components/ui/badge"
+
+
 
 const images = [
   'https://i.ibb.co/gMjYVhp/bgg.webp',
@@ -83,45 +90,121 @@ export default function CoursesPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center">
-          <div className="mr-4 hidden md:flex">
-            <Link href="/" className="mr-6 flex items-center space-x-2">
-            <img  className='flex ml-2 size-8 rounded-full' src="https://i.ibb.co/rf0pYcG/TEST.jpg" alt="TEST"></img>
-            </Link>
-            <nav className="flex items-center space-x-6 text-sm font-medium">
-              <Button>
-                <Link href="/courses">Cursos</Link>
-                </Button>
-              <Link href="/about">Acerca de</Link>
-            </nav>
-          </div>
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="pr-0">
-              <MobileNav />
-            </SheetContent>
-          </Sheet>
-          <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-            <div className="w-full flex-1 md:w-auto md:flex-none">
-              <Input placeholder="Buscar cursos..." className="hidden" />
+      <header className="bg-primary text-primary-foreground py-4 px-6">
+  <div className="container mx-auto flex items-center justify-between">
+    <Link href="/" className="flex items-center gap-2" prefetch={false}> 
+      <span className="text-lg font-semibold">Caramel</span>
+    </Link>
+    <nav className="hidden ml-10 md:flex justify-center items-center gap-4">
+      <Link href="/courses" className="hover:underline" prefetch={false}>
+        Courses
+      </Link>
+      <Link href="#" className="hover:underline" prefetch={false}>
+        Pricing
+      </Link>
+      <Link href="/about" className="hover:underline" prefetch={false}>
+        About
+      </Link>
+    </nav>
+    <div className="hidden md:flex items-center gap-2">
+      <Link href="/login">
+        <Button variant="outline" className="text-black">
+          Login
+        </Button>
+      </Link>
+      <Link href="/register">
+        <Button variant="secondary" className="text-black">
+          Register
+        </Button>
+      </Link>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline" size="icon" className="rounded-full">
+            <Avatar className="h-8 w-8">
+              <AvatarImage src="/placeholder-user.jpg" />
+              <AvatarFallback>JD</AvatarFallback>
+            </Avatar>
+            <span className="sr-only">Toggle user menu</span>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <div className="flex items-center gap-2 p-2">
+            <Avatar className="h-8 w-8">
+              <AvatarImage src="/placeholder-user.jpg" />
+              <AvatarFallback>JD</AvatarFallback>
+            </Avatar>
+            <div className="grid gap-0.5 leading-none">
+              <div className="font-semibold">Jorge Bozo</div>
+              <div className="text-sm text-muted-foreground">john@example.com</div>
             </div>
-            <nav className="flex  justify-center items-center mr-3">
-              <Button variant="ghost" asChild className="mr-2">
-                <Link href="/login">Iniciar sesión</Link>
-              </Button>
-              <Button asChild>
-                <Link href="/register">Registrarse</Link>
-              </Button>
-            </nav>
           </div>
-        </div>
-      </header>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>
+            <Link href="#" className="flex items-center gap-2" prefetch={false}>
+              <div className="h-4 w-4" />
+              <span>Profile</span>
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="#" className="flex items-center gap-2" prefetch={false}>
+              <div className="h-4 w-4" />
+              <span>Settings</span>
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>
+            <Link href="#" className="flex items-center gap-2" prefetch={false}>
+              <div className="h-4 w-4" />
+              <span>Sign out</span>
+            </Link>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
+    <div className="md:hidden">
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button variant="outline" size="icon" className="rounded-full">
+            <Avatar className="h-8 w-8">
+              <AvatarImage src="/placeholder-user.jpg" />
+              <AvatarFallback>JD</AvatarFallback>
+            </Avatar>
+            <span className="sr-only">Toggle user menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="right" className="w-full max-w-xs">
+          <div className="flex flex-col gap-6 p-6">
+            <Link href="#" className="flex items-center gap-2" prefetch={false}>
+              <span className="text-lg font-semibold">Caramel</span>
+            </Link>
+            <nav className="grid gap-2">
+              <Link href="#" className="hover:underline flex items-center gap-2" prefetch={false}>
+                Courses
+              </Link>
+              <Link href="#" className="hover:underline flex items-center gap-2" prefetch={false}>
+                Pricing
+              </Link>
+              <Link href="#" className="hover:underline flex items-center gap-2" prefetch={false}>
+                About
+              </Link>
+              <Link href="#" className="hover:underline flex items-center gap-2" prefetch={false}>
+                Contact
+              </Link>
+            </nav>
+            <div className="flex flex-col gap-2">
+              <Button variant="outline" className="text-black">
+                Login
+              </Button>
+              <Button variant="secondary" className="text-black">
+                Register
+              </Button>
+            </div>
+          </div>
+        </SheetContent>
+      </Sheet>
+    </div>
+  </div>
+</header>
       <main className="flex-1">
         <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
           {images.map((src, index) => (

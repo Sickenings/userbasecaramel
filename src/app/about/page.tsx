@@ -1,30 +1,135 @@
-import Link from "next/link";
-import { Button } from "@/app/components/ui/button";
-import { Avatar, AvatarImage, AvatarFallback } from "@/app/components/ui/avatar";
+import Link from "next/link"
+import { Button } from "@/app/components/ui/button"
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuSeparator, DropdownMenuItem } from "@/app/components/ui/dropdown-menu"
+import { Avatar, AvatarImage, AvatarFallback } from "@/app/components/ui/avatar"
+import { Sheet, SheetTrigger, SheetContent } from "@/app/components/ui/sheet"
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/app/components/ui/accordion"
+import { Label } from "@/app/components/ui/label"
+import { Checkbox } from "@/app/components/ui/checkbox"
+import { Input } from "@/app/components/ui/input"
+import { Badge } from "@/app/components/ui/badge"
 
-export function About() {
+
+
+
+export default function About() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="fixed top-0 left-0 z-10 w-full bg-transparent text-primary-foreground py-4 px-6 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold" prefetch={false}>
-          <Button variant="ghost" className="mr-4">
-            
+     <header className="bg-primary text-primary-foreground py-4 px-6">
+  <div className="container mx-auto flex items-center justify-between">
+    <Link href="/" className="flex items-center gap-2" prefetch={false}> 
+      <span className="text-lg font-semibold">Caramel</span>
+    </Link>
+    <nav className="hidden ml-10 md:flex justify-center items-center gap-4">
+      <Link href="/courses" className="hover:underline" prefetch={false}>
+        Courses
+      </Link>
+      <Link href="#" className="hover:underline" prefetch={false}>
+        Pricing
+      </Link>
+      <Link href="/about" className="hover:underline" prefetch={false}>
+        About
+      </Link>
+    </nav>
+    <div className="hidden md:flex items-center gap-2">
+      <Link href="/login">
+        <Button variant="outline" className="text-black">
+          Login
+        </Button>
+      </Link>
+      <Link href="/register">
+        <Button variant="secondary" className="text-black">
+          Register
+        </Button>
+      </Link>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline" size="icon" className="rounded-full">
+            <Avatar className="h-8 w-8">
+              <AvatarImage src="/placeholder-user.jpg" />
+              <AvatarFallback>JD</AvatarFallback>
+            </Avatar>
+            <span className="sr-only">Toggle user menu</span>
           </Button>
-        </Link>
-        <div className="flex gap-4">
-          <Button  className="bg-white text-black">
-           <Link href="/login">
-            Login
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <div className="flex items-center gap-2 p-2">
+            <Avatar className="h-8 w-8">
+              <AvatarImage src="/placeholder-user.jpg" />
+              <AvatarFallback>JD</AvatarFallback>
+            </Avatar>
+            <div className="grid gap-0.5 leading-none">
+              <div className="font-semibold">Jorge Bozo</div>
+              <div className="text-sm text-muted-foreground">john@example.com</div>
+            </div>
+          </div>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>
+            <Link href="#" className="flex items-center gap-2" prefetch={false}>
+              <div className="h-4 w-4" />
+              <span>Profile</span>
             </Link>
-          </Button>
-          <Button  className="bg-black text-white">
-            <Link href="/register">
-            Register
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="#" className="flex items-center gap-2" prefetch={false}>
+              <div className="h-4 w-4" />
+              <span>Settings</span>
             </Link>
-            
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>
+            <Link href="#" className="flex items-center gap-2" prefetch={false}>
+              <div className="h-4 w-4" />
+              <span>Sign out</span>
+            </Link>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
+    <div className="md:hidden">
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button variant="outline" size="icon" className="rounded-full">
+            <Avatar className="h-8 w-8">
+              <AvatarImage src="/placeholder-user.jpg" />
+              <AvatarFallback>JD</AvatarFallback>
+            </Avatar>
+            <span className="sr-only">Toggle user menu</span>
           </Button>
-        </div>
-      </header>
+        </SheetTrigger>
+        <SheetContent side="right" className="w-full max-w-xs">
+          <div className="flex flex-col gap-6 p-6">
+            <Link href="#" className="flex items-center gap-2" prefetch={false}>
+              <span className="text-lg font-semibold">Caramel</span>
+            </Link>
+            <nav className="grid gap-2">
+              <Link href="#" className="hover:underline flex items-center gap-2" prefetch={false}>
+                Courses
+              </Link>
+              <Link href="#" className="hover:underline flex items-center gap-2" prefetch={false}>
+                Pricing
+              </Link>
+              <Link href="#" className="hover:underline flex items-center gap-2" prefetch={false}>
+                About
+              </Link>
+              <Link href="#" className="hover:underline flex items-center gap-2" prefetch={false}>
+                Contact
+              </Link>
+            </nav>
+            <div className="flex flex-col gap-2">
+              <Button variant="outline" className="text-black">
+                Login
+              </Button>
+              <Button variant="secondary" className="text-black">
+                Register
+              </Button>
+            </div>
+          </div>
+        </SheetContent>
+      </Sheet>
+    </div>
+  </div>
+</header>
       <main className="flex-1 pt-20">
         <section className="bg-muted py-12 md:py-20 flex flex-col items-center justify-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center">Bienvenidos caramel preview</h1>
@@ -137,6 +242,3 @@ export function About() {
     </div>
   );
 }
-
-
-export default About;
