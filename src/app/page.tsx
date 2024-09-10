@@ -60,6 +60,7 @@ const faqs = [
 ]
 
 
+
 export default function CoursesPage() {
   const [currentImage, setCurrentImage] = useState(0)
   const [ ] = useState("")
@@ -77,25 +78,6 @@ export default function CoursesPage() {
       carouselRef.current.scrollBy({ left: scrollOffset, behavior: 'smooth' });
     }
   };
-
-  function CheckIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M20 6 9 17l-5-5" />
-      </svg>
-    )
-  }
 
   return (
     <div className="flex flex-col min-h-screen font-sans antialiased">
@@ -328,19 +310,19 @@ export default function CoursesPage() {
               <div className="text-4xl font-bold text-[#5C3D2E]">$49</div>
               <ul className="space-y-2 text-[#8C7B72]">
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   Fundamentals of Baking
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   10 Baking Recipes
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   Baking Techniques Tutorials
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   Access to Baking Community
                 </li>
               </ul>
@@ -358,23 +340,23 @@ export default function CoursesPage() {
               <div className="text-4xl font-bold text-[#5C3D2E]">$99</div>
               <ul className="space-y-2 text-[#8C7B72]">
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   Beginner Baker Course
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   20 Advanced Baking Recipes
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   Baking Masterclasses
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   Personalized Baking Feedback
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   Access to Baking Community
                 </li>
               </ul>
@@ -392,23 +374,23 @@ export default function CoursesPage() {
               <div className="text-4xl font-bold text-[#5C3D2E]">$199</div>
               <ul className="space-y-2 text-[#8C7B72]">
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   Beginner and Home Baker Courses
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   30 Professional Baking Recipes
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   Advanced Baking Masterclasses
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   Personalized Baking Feedback and Mentorship
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-[#E2B887]" />
+                  <div className="w-4 h-4 fill-[#E2B887]" />
                   Access to Baking Community and Events
                 </li>
               </ul>
