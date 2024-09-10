@@ -367,7 +367,7 @@ export default function CoursesPage() {
           </Card>
           <Card className="bg-[#FFFBF7] shadow-md">
             <CardHeader className="border-b p-6">
-              <CardTitle className="text-2xl font-bold text-[#5C3D2E]">Professional Baker</CardTitle>
+              <CardTitle className="text-2xl font-bold text-[#5C3D2E]">Professional Curso</CardTitle>
               <CardDescription className="text-[#8C7B72]">Become a baking expert</CardDescription>
             </CardHeader>
             <CardContent className="p-6 space-y-4">
