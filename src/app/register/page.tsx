@@ -1,78 +1,97 @@
-"use client"
-import { Input } from "@/app/components/ui/input"
-import { Button } from "@/app/components/ui/button"
-import Link from "next/link"
-import { useState } from 'react';
-import axios from 'axios';
+"use client";
+import { Input } from "@/app/components/ui/input";
+import { Button } from "@/app/components/ui/button";
+import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import React from "react";
 
-export default function Register() {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+function Register() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const router = useRouter();
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('/api/auth/register', { username, email, password });
-      alert(response.data.message); // Alerta de éxito
-    } catch (error) {
-      // Especificar el tipo del error
-      if (axios.isAxiosError(error)) {
-        // Si el error es un error de Axios, acceder a la respuesta
-        alert(error.response?.data?.message || 'Error desconocido'); // Alerta de error
-      } else {
-        alert('Error desconocido'); // Manejo de otros tipos de errores
-      }
+  const onSubmit = handleSubmit(async (data) => {
+    const res = await fetch("/api/auth/register", {
+      method: "POST",
+      body: JSON.stringify({
+        username: data.username,
+        email: data.email,
+        password: data.password,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (res.ok) {
+      alert("Registrado exitosamente, por favor espere...");
+      router.push("/courses"); // Redirigir a la página de inicio de sesión
+    } else {
+      const errorData = await res.json();
+      alert(errorData.message || "Error al registrarse, por favor intente de nuevo.");
     }
-  };
+  });
+
+  console.log(errors);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-[#FFF5EE] to-[#FFEFD5]">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-[#FFF5EE] to-[#FFEFD5] font-sans antialiased">
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-xl">
         <h1 className="mb-2 text-2xl font-bold text-center">Registrarse</h1>
-        <p className="mb-6 text-center text-muted-foreground">Crea una cuenta para acceder a tus cursos</p>
-        <form className="space-y-4" onSubmit={handleSubmit}>
+        <p className="mb-6 text-center text-muted-foreground">
+          Crea una cuenta para acceder a tus cursos
+        </p>
+        <form className="space-y-4" onSubmit={onSubmit}>
           <div>
-            <label htmlFor="name" className="block text-sm font-medium">
+            <label htmlFor="username" className="block text-sm font-medium">
               Usuario
             </label>
-            <Input 
-              id="name" 
-              type="text" 
+            <Input
+              type="text"
+              {...register("username", {
+                required: {
+                  value: true,
+                  message: "El nombre de usuario es requerido",
+                },
+              })}
               placeholder="Ingresa tu nombre"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
             />
           </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium">
               Email
             </label>
-            <Input 
-              id="email" 
-              type="email" 
+            <Input
+              type="email"
+              {...register("email", {
+                required: {
+                  value: true,
+                  message: "El email es requerido",
+                },
+              })}
               placeholder="m@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)} 
-              required
             />
           </div>
           <div>
-            <div className="flex items-center justify-between">
-              <label htmlFor="password" className="block text-sm font-medium">
-                Contraseña
-              </label>
-            </div>
-            <Input 
-              id="password" 
-              type="password" 
+            <label htmlFor="password" className="block text-sm font-medium">
+              Contraseña
+            </label>
+            <Input
+              type="password"
               placeholder="********"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
+              {...register("password", {
+                required: {
+                  value: true,
+                  message: "La contraseña es requerida",
+                },
+              })}
             />
           </div>
+
           <Button className="w-full" variant="default" type="submit">
             Registrarse
           </Button>
@@ -94,5 +113,7 @@ export default function Register() {
         </p>
       </div>
     </div>
-  )
+  );
 }
+
+export default Register;

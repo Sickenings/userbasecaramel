@@ -27,8 +27,8 @@ export default function Login() {
     }
   };
 
-  return (
-    <div className="flex min-h-screen w-full items-center justify-center bg-gradient-to-r from-[#FFF5EE] to-[#FFEFD5]">
+  return ( 
+    <div className="flex min-h-screen w-full items-center justify-center bg-gradient-to-r from-[#FFF5EE] to-[#FFEFD5] font-sans antialiased">
       <div className="relative w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-xl">
         <div className="absolute inset-0 z-0">
           <Carousel className="h-full w-full">
@@ -112,9 +112,15 @@ export default function Login() {
             <Link href="/register" className="underline" prefetch={false}>
               Registrarse
             </Link>
+            <p className="mt-4 text-sm text-center text-muted-foreground">
+          {" "}
+          <Link href="/" className="text-blue-500" prefetch={false}>
+            Volver al inicio
+          </Link>
+        </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   )
 }
